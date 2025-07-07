@@ -65,18 +65,7 @@ function AnimatedText() {
   return (
     <Center>
       <Float speed={1} rotationIntensity={0.1} floatIntensity={0.5}>
-        <Text3D
-          font="/fonts/helvetiker_regular.typeface.json"
-          size={1.2}
-          height={0.2}
-          curveSegments={12}
-          bevelEnabled
-          bevelThickness={0.02}
-          bevelSize={0.02}
-          bevelOffset={0}
-          bevelSegments={5}
-        >
-          DEV
+        <Box args={[3, 1, 0.3]}>
           <meshStandardMaterial
             color="hsl(262, 80%, 60%)"
             metalness={0.8}
@@ -84,7 +73,7 @@ function AnimatedText() {
             emissive="hsl(262, 80%, 30%)"
             emissiveIntensity={0.3}
           />
-        </Text3D>
+        </Box>
       </Float>
     </Center>
   );
