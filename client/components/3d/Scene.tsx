@@ -79,23 +79,34 @@ function AnimatedText() {
 
 export default function Scene() {
   return (
-    <div className="w-full h-screen absolute inset-0 -z-10">
+    <div className="w-full h-screen absolute inset-0 -z-10 opacity-60">
       <Canvas
         camera={{ position: [0, 0, 8], fov: 45 }}
-        gl={{ antialias: true, alpha: true }}
+        gl={{
+          antialias: true,
+          alpha: true,
+          powerPreference: "high-performance",
+        }}
+        dpr={[1, 2]}
       >
         <Suspense fallback={null}>
           <Environment preset="night" />
-          <ambientLight intensity={0.4} />
+          <ambientLight intensity={0.3} />
           <pointLight
             position={[10, 10, 10]}
-            intensity={1}
+            intensity={1.5}
             color="hsl(262, 80%, 60%)"
+            castShadow
           />
           <pointLight
             position={[-10, -10, -10]}
-            intensity={0.5}
+            intensity={0.8}
             color="hsl(220, 80%, 60%)"
+          />
+          <directionalLight
+            position={[0, 10, 5]}
+            intensity={0.5}
+            color="hsl(262, 80%, 70%)"
           />
 
           <AnimatedText />
@@ -105,6 +116,8 @@ export default function Scene() {
           <FloatingObject position={[-3, -2, -1]} geometry="torus" />
           <FloatingObject position={[3, 3, -4]} geometry="sphere" />
           <FloatingObject position={[0, -3, -2]} geometry="box" />
+          <FloatingObject position={[-5, -1, -5]} geometry="torus" />
+          <FloatingObject position={[5, 1, -5]} geometry="sphere" />
 
           <OrbitControls
             enableZoom={false}
@@ -112,7 +125,9 @@ export default function Scene() {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 3}
             autoRotate
-            autoRotateSpeed={0.5}
+            autoRotateSpeed={0.3}
+            enableDamping
+            dampingFactor={0.05}
           />
         </Suspense>
       </Canvas>
