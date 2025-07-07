@@ -63,6 +63,24 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        sans: [
+          "Inter",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        mono: ["JetBrains Mono", "Fira Code", "monospace"],
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "mesh-gradient":
+          "radial-gradient(at 40% 20%, hsl(var(--primary)) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(var(--accent)) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(var(--primary)) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(var(--accent)) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(var(--primary)) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(var(--accent)) 0px, transparent 50%), radial-gradient(at 0% 0%, hsl(var(--primary)) 0px, transparent 50%)",
+      },
       keyframes: {
         "accordion-down": {
           from: {
@@ -80,10 +98,30 @@ export default {
             height: "0",
           },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in-left": {
+          "0%": { opacity: "0", transform: "translateX(-20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        rotate: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        float: "float 6s ease-in-out infinite",
+        "fade-in": "fade-in 0.8s ease-out",
+        "slide-in-left": "slide-in-left 0.8s ease-out",
+        "rotate-slow": "rotate 20s linear infinite",
       },
     },
   },
