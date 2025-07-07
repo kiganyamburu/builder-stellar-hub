@@ -62,7 +62,7 @@ export default function Footer() {
             using React, Three.js & TailwindCSS
           </p>
           <p className="text-sm text-muted-foreground/60 mt-2">
-            © 2024 Your Name. All rights reserved.
+            © 2024 Peter mburu. All rights reserved.
           </p>
         </motion.div>
       </div>
