@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Scene from "@/components/3d/Scene";
 import Navigation from "@/components/portfolio/Navigation";
 import Hero from "@/components/portfolio/Hero";
+import About from "@/components/portfolio/About";
 import Skills from "@/components/portfolio/Skills";
 import Projects from "@/components/portfolio/Projects";
 import Footer from "@/components/portfolio/Footer";
@@ -29,6 +30,9 @@ export default function Index() {
       <div className="relative z-10">
         <section id="home">
           <Hero />
+        </section>
+        <section id="about">
+          <About />
         </section>
         <section id="skills">
           <Skills />
