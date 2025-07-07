@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Scene from "@/components/3d/Scene";
+import Navigation from "@/components/portfolio/Navigation";
 import Hero from "@/components/portfolio/Hero";
 import Skills from "@/components/portfolio/Skills";
 import Projects from "@/components/portfolio/Projects";
@@ -19,15 +20,25 @@ function LoadingFallback() {
 export default function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Navigation />
+
       <Suspense fallback={<LoadingFallback />}>
         <Scene />
       </Suspense>
 
       <div className="relative z-10">
-        <Hero />
-        <Skills />
-        <Projects />
-        <Footer />
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Footer />
+        </section>
       </div>
     </div>
   );
