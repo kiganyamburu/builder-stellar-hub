@@ -272,10 +272,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Feel free to reach out if you have any questions or suggestions!
 
 - **Portfolio**: [Your Portfolio URL]
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your LinkedIn]
-- **Twitter**: [@YourTwitter]
+- **Email**: mburukiganya@gmil.com
+- **LinkedIn**: https://www.linkedin.com/in/kiganya-mburu-53a7b5231/
+- **Twitter**: https://x.com/kiganyamburu
 
 ---
 
-Made with ❤️ using React, Three.js, and modern web technologies.
+
