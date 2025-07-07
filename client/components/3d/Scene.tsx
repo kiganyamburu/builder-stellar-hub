@@ -3,9 +3,7 @@ import { Suspense, useRef } from "react";
 import {
   Float,
   OrbitControls,
-  Text3D,
   Center,
-  useTexture,
   Environment,
   Sphere,
   Box,
