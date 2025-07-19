@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
@@ -34,9 +34,10 @@ export default function Footer() {
           className="flex justify-center gap-6 mb-12"
         >
           {[
-            { icon: Github, href: "#", label: "GitHub" },
-            { icon: Linkedin, href: "#", label: "LinkedIn" },
-            { icon: Mail, href: "mburukigany@gmail.com", label: "Email" },
+            { icon: Github, href: "https://github.com/kiganyamburu", label: "GitHub" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/kiganya-mburu-53a7b5231/", label: "LinkedIn" },
+            { icon: Mail, href: "", label: "Email" },
+            { icon: Twitter, href: "https://x.com/kiganyamburu", label: "twitter" },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}
@@ -57,9 +58,9 @@ export default function Footer() {
           className="text-center pt-8 border-t border-border"
         >
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            Made with{" "}
-            <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />{" "}
-            using React, Three.js & TailwindCSS
+            {/* Made with{" "} */}
+            {/* <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />{"love "} */}
+            {/* using React, Three.js & TailwindCSS */}
           </p>
           <p className="text-sm text-muted-foreground/60 mt-2">
             © 2024 Peter mburu. All rights reserved.

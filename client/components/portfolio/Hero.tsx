@@ -69,9 +69,9 @@ export default function Hero() {
             className="flex justify-center gap-6 pt-8"
           >
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Mail, href: "#", label: "Email" },
+              { icon: Github, href: "https://github.com/kiganyamburu", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/kiganya-mburu-53a7b5231/", label: "LinkedIn" },
+              { icon: Mail, href: "", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
