@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -69,10 +70,17 @@ export default function Navigation() {
                 Hire Me
               </Button>
             </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <ModeToggle />
+            </motion.div>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
             <Button
               variant="ghost"
               size="sm"
@@ -112,6 +120,7 @@ export default function Navigation() {
               >
                 Hire Me
               </Button>
+              <ModeToggle />
             </div>
           </motion.div>
         )}
