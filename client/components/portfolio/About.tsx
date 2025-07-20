@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Code, Lightbulb, Rocket, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const highlights = [
   {
@@ -124,6 +125,11 @@ export default function About() {
             company seeking to modernize your tech stack, I'm here to help bring
             your vision to life.
           </p>
+          <Button asChild className="mb-8">
+            <a href="/cv.pdf" download>
+              Download CV
+            </a>
+          </Button>
           <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             {[
               { number: "50+", label: "Projects Completed" },
