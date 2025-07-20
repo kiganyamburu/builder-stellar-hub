@@ -42,7 +42,7 @@ export default function About() {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             I'm a passionate full-stack developer with{" "}
             <Badge variant="secondary" className="mx-1">
-              5+ years
+              3+ years
             </Badge>{" "}
             of experience creating digital solutions that make a difference. I
             love turning complex problems into simple, beautiful, and intuitive
