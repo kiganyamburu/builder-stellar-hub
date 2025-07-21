@@ -133,7 +133,7 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             {[
               { number: "50+", label: "Projects Completed" },
-              { number: "5+", label: "Years Experience" },
+              { number: "3+", label: "Years Experience" },
               { number: "100%", label: "Client Satisfaction" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
