@@ -1,7 +1,17 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Code, Lightbulb, Rocket, Users } from "lucide-react";
+import { Code, Lightbulb, Rocket, Users, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { downloadFile } from "@/lib/download";
+import { useState, useEffect } from "react";
+import { useToast } from "@/hooks/use-toast";
+
+// Type for gtag if using Google Analytics
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
 
 const highlights = [
   {
@@ -27,6 +37,62 @@ const highlights = [
 ];
 
 export default function About() {
+  const [isDownloading, setIsDownloading] = useState(false);
+  const { toast } = useToast();
+
+  const handleDownloadCV = async (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    setIsDownloading(true);
+
+    // Track download event
+    try {
+      // You can replace this with your analytics tracking
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "download", {
+          event_category: "engagement",
+          event_label: "CV Download",
+        });
+      }
+    } catch (analyticsError) {
+      // Analytics shouldn't break the download
+      console.log("Analytics tracking failed:", analyticsError);
+    }
+
+    try {
+      const success = await downloadFile("/cv.pdf", "Portfolio_CV.pdf");
+      if (success) {
+        toast({
+          title: "Download Started",
+          description: "Your CV download has begun successfully.",
+        });
+      } else {
+        throw new Error("Direct download failed");
+      }
+    } catch (error) {
+      console.error("Download error:", error);
+      toast({
+        title: "Download Failed",
+        description: "There was an error downloading the CV. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  // Optional: Add keyboard shortcut for CV download (Ctrl+D)
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.key === "d" && !isDownloading) {
+        event.preventDefault();
+        handleDownloadCV();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isDownloading]);
+
   return (
     <section className="py-24 px-6 relative">
       <div className="max-w-6xl mx-auto">
@@ -125,10 +191,21 @@ export default function About() {
             company seeking to modernize your tech stack, I'm here to help bring
             your vision to life.
           </p>
-          <Button asChild className="mb-8">
-            <a href="/cv.pdf" download>
-              Download CV
-            </a>
+          <Button
+            onClick={handleDownloadCV}
+            disabled={isDownloading}
+            className="mb-8 inline-flex items-center gap-2"
+            aria-label={
+              isDownloading
+                ? "Downloading CV, please wait"
+                : "Download CV PDF file (Ctrl+D)"
+            }
+            title="Download CV (Ctrl+D)"
+          >
+            <Download
+              className={`w-4 h-4 ${isDownloading ? "animate-spin" : ""}`}
+            />
+            {isDownloading ? "Downloading..." : "Download CV"}
           </Button>
           <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             {[
