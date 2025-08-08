@@ -444,4 +444,4 @@ Feel free to reach out if you have any questions or suggestions!
 
 ---
 
-Built with ❤️ using React, Three.js, and modern web technologies.
+Built using React, Three.js, and modern web technologies.
