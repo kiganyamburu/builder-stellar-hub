@@ -120,6 +120,19 @@ const allProjects = [
     featured: false,
     year: "2023",
   },
+  {
+    title: "Therapist Practice Website",
+    description:
+      "Professional therapy practice website with appointment booking, client portal, secure messaging, and HIPAA-compliant features.",
+    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Socket.io"],
+    category: "Healthcare",
+    liveUrl: "#",
+    githubUrl: "#",
+    image:
+      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
+    featured: true,
+    year: "2024",
+  },
 ];
 
 const categories = [
@@ -131,6 +144,7 @@ const categories = [
   "Fintech",
   "Mobile App",
   "CMS",
+  "Healthcare",
 ];
 const years = ["All", "2024", "2023"];
 
