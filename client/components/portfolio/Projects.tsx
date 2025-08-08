@@ -118,11 +118,20 @@ export default function Projects() {
                   </div>
 
                   <div className="flex gap-4">
-                    <Button size="sm" className="group/btn">
+                    <Button
+                      size="sm"
+                      className="group/btn"
+                      onClick={() => window.open(project.liveUrl, "_blank")}
+                    >
                       <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
                       Live Demo
                     </Button>
-                    <Button size="sm" variant="outline" className="group/btn">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="group/btn"
+                      onClick={() => window.open(project.githubUrl, "_blank")}
+                    >
                       <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
                       Code
                     </Button>
