@@ -10,7 +10,7 @@ const projects = [
       "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include real-time inventory, payment processing, and admin dashboard.",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/kiganyamburu/commerce-vista-spark",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
     featured: true,
