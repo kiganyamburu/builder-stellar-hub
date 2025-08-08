@@ -21,7 +21,7 @@ const projects = [
       "Collaborative project management tool with real-time updates, drag-and-drop interface, and team collaboration features.",
     technologies: ["Next.js", "TypeScript", "Prisma", "WebSockets"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/kiganyamburu/zest-team-tasks",
     image:
       "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
     featured: true,
