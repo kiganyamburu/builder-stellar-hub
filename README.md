@@ -2,7 +2,9 @@
 
 A cutting-edge, interactive developer portfolio featuring stunning 3D visuals, dark/light mode theming, and smooth animations. Built with React, Three.js, and modern web technologies to showcase your professional profile in the most engaging way possible.
 
-![Portfolio Preview](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&h=600&fit=crop)
+![Stellar Hub Portfolio](./public/portfolio.png)
+
+_Modern developer portfolio showcasing interactive 3D elements, responsive design, and professional project presentations with dark/light theme support._
 
 ## ✨ Features
 
