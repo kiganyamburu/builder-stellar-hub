@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -149,9 +150,11 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <Button size="lg" variant="outline" className="group">
-            View All Projects
-            <ExternalLink className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
+          <Button size="lg" variant="outline" className="group" asChild>
+            <Link to="/projects">
+              View All Projects
+              <ExternalLink className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
+            </Link>
           </Button>
         </motion.div>
       </div>
