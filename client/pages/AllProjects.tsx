@@ -49,7 +49,7 @@ const allProjects = [
     technologies: ["React", "OpenAI API", "Socket.io", "TailwindCSS"],
     category: "AI/ML",
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/kiganyamburu/chatter-ai-wave",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
     featured: false,
