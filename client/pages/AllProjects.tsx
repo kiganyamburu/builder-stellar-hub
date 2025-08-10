@@ -126,8 +126,8 @@ const allProjects = [
       "Professional therapy practice website with appointment booking, client portal, secure messaging, and HIPAA-compliant features.",
     technologies: ["React", "Node.js", "MongoDB", "Stripe", "Socket.io"],
     category: "Healthcare",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://compassionate-wellbeing-site.vercel.app/",
+    githubUrl: "https://github.com/kiganyamburu/compassionate-wellbeing-site",
     image:
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
     featured: true,
