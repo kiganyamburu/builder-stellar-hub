@@ -62,7 +62,7 @@ const allProjects = [
     technologies: ["React", "Three.js", "Framer Motion", "Vite"],
     category: "Web Design",
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/kiganyamburu/builder-stellar-hub",
     image:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop",
     featured: false,
