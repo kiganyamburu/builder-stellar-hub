@@ -121,9 +121,9 @@ const allProjects = [
     year: "2023",
   },
   {
-    title: "Therapist Practice Website",
+    title: "Serene Trails Counseling Center",
     description:
-      "Professional therapy practice website with appointment booking, client portal, secure messaging, and HIPAA-compliant features.",
+      "Professional therapy practice website with appointment booking, client portal and secure messaging.",
     technologies: ["React", "Node.js", "MongoDB", "Stripe", "Socket.io"],
     category: "Healthcare",
     liveUrl: "https://compassionate-wellbeing-site.vercel.app/",
