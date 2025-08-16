@@ -141,8 +141,7 @@ const allProjects = [
     category: "Web App",
     liveUrl: "https://marsabit-event-sandy.vercel.app/",
     githubUrl: "https://github.com/kiganyamburu/marsabit-event",
-    image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop",
+    image: "/marsabit.png",
     featured: false,
     year: "2025",
   },
