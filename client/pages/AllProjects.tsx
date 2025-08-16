@@ -133,6 +133,19 @@ const allProjects = [
     featured: true,
     year: "2024",
   },
+  {
+    title: "Marsabit Event Platform",
+    description:
+      "A modern event management platform for Marsabit County, featuring event listings, ticketing, and real-time updates for attendees.",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Vercel"],
+    category: "Web App",
+    liveUrl: "https://marsabit-event-sandy.vercel.app/",
+    githubUrl: "#",
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop",
+    featured: false,
+    year: "2025",
+  },
 ];
 
 const categories = [
