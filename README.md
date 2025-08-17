@@ -6,6 +6,16 @@ A cutting-edge, interactive developer portfolio featuring stunning 3D visuals, d
 
 _Modern developer portfolio showcasing interactive 3D elements, responsive design, and professional project presentations with dark/light theme support._
 
+## ✨ Featured Projects
+
+Here are some highlighted projects from this portfolio:
+
+- **Marsabit Event Platform**  
+  [Live Demo](https://marsabit-event-sandy.vercel.app/)  
+  A modern event management platform for Marsabit County, featuring event listings, ticketing, and real-time updates for attendees.
+
+<!-- You can add more featured projects here as needed -->
+
 ## ✨ Features
 
 ### 🎨 **Visual Excellence**
